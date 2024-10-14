@@ -1,0 +1,12 @@
+kubectl apply -f grafana-pvc.yaml
+kubectl apply -f grafana-configmap.yaml
+kubectl apply -f grafana-task.yaml
+kubectl apply -f grafana-taskrun.yaml
+kubectl apply -f grafana-service.yaml
+
+
+tkn taskrun logs run-grafana-run -f
+
+kubectl delete task run-grafana
+kubectl delete taskrun run-grafana-run
+kubectl delete pvc grafana-pvc

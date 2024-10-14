@@ -1,0 +1,11 @@
+apiVersion: tekton.dev/v1beta1
+kind: TaskRun
+metadata:
+  name: run-grafana-run
+spec:
+  taskRef:
+    name: run-grafana
+  workspaces:
+    - name: grafana-storage
+      persistentVolumeClaim:
+        claimName: grafana-pvc  # Use the single PVC for Grafana data

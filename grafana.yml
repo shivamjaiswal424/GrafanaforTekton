@@ -1,0 +1,21 @@
+# grafana.yml
+[server]
+http_port = 3000
+domain = localhost
+
+[auth]
+# set to true to enable authentication
+enabled = true
+
+[database]
+# You can customize the database settings here.
+# Refer to Grafana documentation for more options.
+type = sqlite3
+path = grafana.db
+
+[log]
+mode = console
+level = info
+
+[analytics]
+check_for_updates = true
