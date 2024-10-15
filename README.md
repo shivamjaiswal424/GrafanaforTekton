@@ -37,13 +37,13 @@ kubectl apply -f grafana-pvc.yaml
 Save the Tekton Task YAML into a file named run-grafana.yaml and apply it:
 
 
-kubectl apply -f run-grafana.yaml
+kubectl apply -f grafana-task.yaml
 
 ### Create the Tekton TaskRun:
 
 Save the Tekton TaskRun YAML into a file named run-grafana-run.yaml and apply it:
 
-kubectl apply -f run-grafana-run.yaml
+kubectl apply -f grafana-taskrun.yaml
 
 ### Create the Grafana Service:
 
